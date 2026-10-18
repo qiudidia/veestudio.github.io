@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Bullet Run — Vee Studio 出品的 2D 俯视角硬核射击游戏。大逃杀、僵尸合作、局域网联机对战,16 级军衔成长系统,现已正式上线。">
+<title>Bullet Run | 2D 俯视角射击 | Vee Studio</title>
+<link rel="icon" type="image/svg+xml" href="../assets/icon.svg">
+<link rel="stylesheet" href="../css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<canvas id="bgCanvas"></canvas>
+
+<!-- 导航 -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a class="nav-logo" href="../index.html" aria-label="返回 Vee Studio 首页">
+      <img src="../assets/vee_logo.svg" alt="Vee Studio 标志" class="nav-logo-img">
+      <span class="nav-logo-text">VEE STUDIO</span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html">返回工作室</a>
+      <a href="#modes">游戏模式</a>
+      <a href="#features">游戏特色</a>
+      <a href="#download">下载游戏</a>
+      <a href="#comments">评论区</a>
+    </div>
+    <button class="nav-toggle" aria-label="打开菜单" aria-expanded="false" id="nav-toggle">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="../index.html">返回工作室</a>
+    <a href="#modes">游戏模式</a>
+    <a href="#features">游戏特色</a>
+    <a href="#download">下载游戏</a>
+    <a href="#comments">评论区</a>
+  </div>
+</nav>
+
+<!-- 游戏 Hero -->
+<section class="game-hero" id="top">
+  <div class="game-hero-glow"></div>
+  <div class="game-hero-content">
+    <div class="game-hero-badge reveal"><a href="../index.html">Vee Studio 出品</a> · 1.0 正式版已上线</div>
+    <img src="../assets/logo_dark.svg" alt="Bullet Run 游戏标志" class="game-hero-logo reveal" style="--d:80ms">
+    <p class="game-hero-sub reveal" style="--d:160ms">2D 俯视角硬核射击 · 16 级军衔 XP 系统 · 大逃杀 · 联机对战 · 僵尸合作 · 宝箱系统 · 自动更新</p>
+    <div class="game-hero-buttons reveal" style="--d:240ms">
+      <a class="btn-gold btn-lg" href="https://wwbbw.lanzouv.com/b019vyxpej" target="_blank" rel="noopener">立即下载</a>
+      <a class="btn-ghost btn-lg" href="#modes">了解游戏</a>
+    </div>
+    <div class="platform-line reveal" style="--d:320ms">
+      <span>Windows 端游</span><span class="sep">·</span>
+      <span>提取码 <code>h86r</code></span>
+      <button class="copy-btn" onclick="copyText('h86r', this)">复制</button>
+    </div>
+  </div>
+</section>
+
+<!-- 游戏模式 -->
+<section class="modes" id="modes">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-eyebrow">Game Modes</div>
+      <h2 class="section-title">四种模式,无限乐趣</h2>
+      <p class="section-subtitle">单人对战、大逃杀、生存合作、好友联机 — 总有一款适合你</p>
+    </div>
+
+    <div class="mode-cards">
+      <div class="mode-card reveal">
+        <div class="mode-icon">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2"><circle cx="32" cy="32" r="26"/><path d="M32 6v52M6 32h52"/><circle cx="32" cy="32" r="6" fill="currentColor"/><circle cx="32" cy="32" r="3" fill="var(--bg-dark)"/></svg>
+        </div>
+        <h3>Bot 对战</h3>
+        <p>4 级难度 AI,8 名 Bot 同场竞技。击败 Bot 积攒人头,在人头商店升级装备——弹药、医疗、伤害加成、无限子弹、核爆、手榴弹、机枪。考验你的走位与枪法。</p>
+        <div class="mode-tag">单人</div>
+      </div>
+      <div class="mode-card accent reveal" style="--d:80ms">
+        <div class="mode-icon">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 32l24-24 24 24M8 40l24 24 24-24"/><circle cx="32" cy="32" r="8"/><path d="M32 24v16M24 32h16"/></svg>
+        </div>
+        <h3>大逃杀</h3>
+        <p>21 人大逃杀!开局在出生岛等待 30 秒后集体跳伞,自由选择落点。8000x8000 超大战场,包含 P城、学校、医院、机场、港口等热门区域。搜建筑获取武器、弹药、医疗包、护甲(1-3级)、手雷、燃烧瓶。毒圈不断缩小,缩圈倒计时实时显示,安全区外持续掉血。击杀敌人掉落物资箱,舔包获取战利品。20 个 AI Bot 陪练,从列兵到精英不等。存活计数实时显示,活到最后就是赢家!</p>
+        <div class="mode-tag">单人</div>
+      </div>
+      <div class="mode-card reveal" style="--d:160ms">
+        <div class="mode-icon">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 52l24-40" stroke-linecap="round"/><circle cx="24" cy="22" r="6"/><circle cx="40" cy="22" r="6"/><circle cx="32" cy="40" r="6"/><path d="M12 44l8 8M44 52l8-8"/></svg>
+        </div>
+        <h3>僵尸合作</h3>
+        <p>无限波次生存,每 5 波出现精英(500 血),每 10 波遭遇 BOSS「幽灵」(10000 血,还会扔手雷!)。新增 3 种僵尸品种:速度型(快速冲刺)、坦克型(高血量重甲)、爆炸型(死亡时自爆范围伤害)。地图随机刷新金色宝箱,拾取获得 50-150 金钱。击杀普通僵尸 +5 XP,精英 +35 XP,BOSS +75 XP。波次间隙进入金钱商店,购买步枪、狙击枪、机枪武装到牙齿迎战下一波。击杀奖励 XP 全队共享。</p>
+        <div class="mode-tag">联机 / 单人</div>
+      </div>
+      <div class="mode-card reveal" style="--d:240ms">
+        <div class="mode-icon">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2"><rect x="8" y="14" width="48" height="36" rx="4"/><path d="M16 22h32M16 30h20M16 38h12"/><circle cx="48" cy="38" r="3" fill="currentColor"/></svg>
+        </div>
+        <h3>联机对战</h3>
+        <p>局域网 UDP 直连,三种联机模式:单挑 1v1(先达到 25 击杀的队伍获胜)、乱斗 3 人混战、僵尸合作 4 人小队。自由选色,房间内可随时切换模式,即刻开战。支持中途加入正在进行的游戏,玩家退出时全屏广播通知。</p>
+        <div class="mode-tag">联机</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 游戏特色 -->
+<section class="features" id="features">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-eyebrow">Features</div>
+      <h2 class="section-title">硬核射击体验</h2>
+      <p class="section-subtitle">纯代码绘制的画面,每一帧都是计算</p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-item reveal">
+        <div class="feature-num">01</div>
+        <h3>武器系统</h3>
+        <p>手枪、步枪、狙击枪、刀、机枪,手感迥异。狙击枪半自动、精准一击;机枪 100 发弹匣倾泻火力;刀挥出冰蓝弧光,近战搏杀。开局仅手枪和 0 颗手雷,其余武器在商店购买解锁。</p>
+      </div>
+      <div class="feature-item reveal" style="--d:60ms">
+        <div class="feature-num">02</div>
+        <h3>装备配置</h3>
+        <p>5 套自定义装备,每套可选主武器(步枪/狙击枪/机枪)和 3 个特长。8 个特长覆盖移动、防御、战斗三大类别,从移速加成到自动回血,打造你的专属打法。</p>
+      </div>
+      <div class="feature-item reveal" style="--d:120ms">
+        <div class="feature-num">03</div>
+        <h3>智能 AI</h3>
+        <p>Bot 5 状态机(巡逻/追击/射击/掩体/撤退),会根据距离切换武器,会走位躲弹。僵尸 BOSS 还会投掷手雷。3 种新僵尸品种各有独特行为模式。</p>
+      </div>
+      <div class="feature-item reveal" style="--d:180ms">
+        <div class="feature-num">04</div>
+        <h3>内置商店</h3>
+        <p>战斗中随时打开商店,购买弹药、医疗、伤害加成、无限子弹、甚至核弹清场。战场策略不止于枪法。</p>
+      </div>
+      <div class="feature-item reveal" style="--d:240ms">
+        <div class="feature-num">05</div>
+        <h3>宝箱系统</h3>
+        <p>地图随机刷新金色宝箱,拾取获得 50-150 金钱奖励。宝箱被拾取后 20-40 秒重新生成,联机模式下房主统一管理宝箱生成与同步。</p>
+      </div>
+      <div class="feature-item reveal" style="--d:300ms">
+        <div class="feature-num">06</div>
+        <h3>观战系统</h3>
+        <p>死亡后不直接结束,切换为观战视角跟随队友继续战斗。空格切换队友,直到全员阵亡才宣判 GAME OVER。</p>
+      </div>
+      <div class="feature-item reveal" style="--d:360ms">
+        <div class="feature-num">07</div>
+        <h3>代码即美术</h3>
+        <p>所有武器、准星、UI、特效均由 GDScript 纯代码绘制生成,零外部图片资源。开发者主义的极致浪漫。</p>
+      </div>
+      <div class="feature-item reveal" style="--d:420ms">
+        <div class="feature-num">08</div>
+        <h3>联机对战系统</h3>
+        <p>局域网 UDP 直连,单挑 1v1 限制 25 击杀定胜负,乱斗 3 人混战,僵尸合作 4 人小队。房间内房主可自由切换模式,支持踢人、准备确认、自由选色。支持中途加入正在进行的游戏,玩家退出时全屏广播通知。联机僵尸合作击杀奖励 XP 全队共享!</p>
+      </div>
+      <div class="feature-item reveal" style="--d:480ms">
+        <div class="feature-num">09</div>
+        <h3>军衔与成长系统</h3>
+        <p>16 级军衔,从列兵到上将。击杀敌人积累 XP,XP 线性递增(Lv.1→2 需 100 XP,Lv.15→16 需 800 XP,满级共需 6750 XP)。每升一级解锁更强认同,军衔显示在你的主界面面板上。</p>
+      </div>
+      <div class="feature-item reveal" style="--d:540ms">
+        <div class="feature-num">10</div>
+        <h3>自动更新</h3>
+        <p>游戏启动时自动检查 GitHub 最新版本,发现新版本弹出更新提示,一键跳转下载页面。无需手动检查,始终保持最新版本。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 下载 -->
+<section class="download" id="download">
+  <div class="container">
+    <div class="download-card reveal">
+      <h2>准备好进入战场了吗?</h2>
+      <p>立即下载 Bullet Run 1.0,体验纯代码绘制的硬核射击。Windows 端游,开箱即战。</p>
+      <a class="btn-gold btn-lg" href="https://wwbbw.lanzouv.com/b019vyxpej" target="_blank" rel="noopener">立即下载</a>
+      <div class="password-box">
+        <span>提取密码</span>
+        <code>h86r</code>
+        <button class="copy-btn" onclick="copyText('h86r', this)">复制</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 评论区 -->
+<section class="comments" id="comments">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-eyebrow">Community</div>
+      <h2 class="section-title">玩家评论</h2>
+      <p class="section-subtitle">用 GitHub 账号登录,留下你的想法</p>
+    </div>
+    <div class="comments-box">
+      <script src="https://giscus.app/client.js"
+        data-repo="qiudidia/bulletrun.github.io"
+        data-repo-id="R_kgDOTJd_9A"
+        data-category="General"
+        data-category-id="DIC_kwDOTJd_9M4DBaod"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+      </script>
+    </div>
+  </div>
+</section>
+
+<!-- 页脚 -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="../assets/vee_logo.svg" alt="Vee Studio 标志" class="footer-brand-logo">
+        <div>
+          <div class="footer-brand-name">VEE STUDIO</div>
+          <div class="footer-brand-sub">独立游戏工作室 · 用代码与热爱做游戏</div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">作品</div>
+        <a href="#top">Bullet Run</a>
+        <a href="../index.html#games">SUPER POTATO</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">工作室</div>
+        <a href="../index.html">返回工作室首页</a>
+        <a href="../index.html#news">最新消息</a>
+        <a href="../index.html#contact">联系我们</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Vee Studio. 保留所有权利。</span>
+      <span>Godot Engine 4.6 驱动 · 用热爱与 GDScript 打造</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

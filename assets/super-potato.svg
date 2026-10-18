@@ -1,0 +1,45 @@
+<svg width="240" height="240" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="spGlow" cx="50%" cy="46%" r="55%">
+      <stop offset="0%" stop-color="#ffaa22" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#ffaa22" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="spBody" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eec27c"/>
+      <stop offset="55%" stop-color="#d9a054"/>
+      <stop offset="100%" stop-color="#c0873c"/>
+    </linearGradient>
+    <linearGradient id="spLeaf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8ec85a"/>
+      <stop offset="100%" stop-color="#5f9c34"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="120" cy="116" r="102" fill="url(#spGlow)"/>
+  <ellipse cx="120" cy="197" rx="50" ry="9" fill="#000000" opacity="0.22"/>
+
+  <g>
+    <path d="M115 52 C108 38 96 32 86 34 C90 44 102 52 115 52 Z" fill="url(#spLeaf)"/>
+    <path d="M125 52 C132 38 144 32 154 34 C150 44 138 52 125 52 Z" fill="url(#spLeaf)"/>
+    <rect x="117" y="44" width="6" height="12" rx="3" fill="#5f9c34"/>
+
+    <path d="M120 50 C152 42 180 57 191 83 C202 109 196 147 176 169 C155 192 118 199 92 187 C66 175 48 147 50 117 C52 87 76 59 120 50 Z"
+          fill="url(#spBody)" stroke="#7a4a1e" stroke-width="5" stroke-linejoin="round"/>
+    <ellipse cx="92" cy="88" rx="28" ry="15" fill="#ffffff" opacity="0.12" transform="rotate(-24 92 88)"/>
+
+    <circle cx="157" cy="122" r="3.2" fill="#9c6b2f" opacity="0.6"/>
+    <circle cx="90" cy="160" r="3.2" fill="#9c6b2f" opacity="0.6"/>
+    <circle cx="126" cy="176" r="3.2" fill="#9c6b2f" opacity="0.6"/>
+
+    <circle cx="97" cy="116" r="7.5" fill="#3a2410"/>
+    <circle cx="147" cy="111" r="7.5" fill="#3a2410"/>
+    <path d="M103 137 Q121 151 141 135" fill="none" stroke="#3a2410" stroke-width="5.5" stroke-linecap="round"/>
+
+    <g transform="rotate(-8 165 95)">
+      <rect x="130" y="89" width="66" height="12" rx="3" fill="#2f2f44"/>
+      <rect x="146" y="101" width="12" height="19" rx="2.5" fill="#2f2f44"/>
+      <rect x="168" y="80" width="5" height="9" rx="1.5" fill="#2f2f44"/>
+      <rect x="130" y="89" width="66" height="4" rx="2" fill="#4a4a68"/>
+    </g>
+  </g>
+</svg>

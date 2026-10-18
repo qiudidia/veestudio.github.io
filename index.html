@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Vee Studio 官方网站 — 独立游戏工作室。作品:《Bullet Run》俯视角硬核射击、《SUPER POTATO》生存冒险新作开发中。">
+<title>Vee Studio | 独立游戏工作室</title>
+<link rel="icon" type="image/svg+xml" href="assets/studio-icon.svg">
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<canvas id="bgCanvas"></canvas>
+
+<!-- 导航 -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#hero" aria-label="Vee Studio 首页">
+      <img src="assets/vee_logo.svg" alt="Vee Studio 标志" class="nav-logo-img">
+      <span class="nav-logo-text">VEE STUDIO</span>
+    </a>
+    <div class="nav-links">
+      <a href="#games">游戏作品</a>
+      <a href="#news">最新消息</a>
+      <a href="#about">关于我们</a>
+      <a href="#contact">联系我们</a>
+    </div>
+    <button class="nav-toggle" aria-label="打开菜单" aria-expanded="false" id="nav-toggle">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="#games">游戏作品</a>
+    <a href="#news">最新消息</a>
+    <a href="#about">关于我们</a>
+    <a href="#contact">联系我们</a>
+  </div>
+</nav>
+
+<!-- 工作室 Hero -->
+<section class="hero" id="hero">
+  <div class="hero-glow-a"></div>
+  <div class="hero-glow-b"></div>
+  <div class="hero-content">
+    <div class="hero-logo-wrap reveal">
+      <img src="assets/vee_logo.svg" alt="Vee Studio 标志" class="hero-logo">
+    </div>
+    <div class="hero-badge reveal" style="--d:80ms">独立游戏工作室 · EST. 2025</div>
+    <h1 class="hero-title reveal" style="--d:160ms">
+      <span class="line">VEE STUDIO</span>
+      <span class="line-zh">用代码与热爱,做让人停不下来的游戏</span>
+    </h1>
+    <p class="hero-subtitle reveal" style="--d:240ms">从纯代码绘制的硬核射击《Bullet Run》,到正在孵化的生存冒险新作《SUPER POTATO》——小团队,大野心,一款一款认真做。</p>
+    <div class="hero-buttons reveal" style="--d:320ms">
+      <a class="btn-brand" href="#games">探索游戏作品</a>
+      <a class="btn-ghost" href="#contact">联系我们</a>
+    </div>
+    <div class="hero-meta reveal" style="--d:400ms">
+      <span>Godot 引擎驱动</span><span class="sep">·</span>
+      <span>100% 独立开发</span><span class="sep">·</span>
+      <span>坐标中国</span>
+    </div>
+  </div>
+  <div class="hero-scroll-hint"><div class="mouse"></div></div>
+</section>
+
+<!-- 数据条 -->
+<section class="stats">
+  <div class="container stats-inner">
+    <div class="stat reveal"><div class="stat-num">3</div><div class="stat-label">游戏作品</div></div>
+    <div class="stat reveal" style="--d:80ms"><div class="stat-num">1.0</div><div class="stat-label">已上线版本</div></div>
+    <div class="stat reveal" style="--d:160ms"><div class="stat-num">100%</div><div class="stat-label">独立开发</div></div>
+    <div class="stat reveal" style="--d:240ms"><div class="stat-num">2025</div><div class="stat-label">工作室成立</div></div>
+  </div>
+</section>
+
+<!-- 游戏作品 -->
+<section class="games" id="games">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-eyebrow">Our Games</div>
+      <h2 class="section-title">游戏作品</h2>
+      <p class="section-subtitle">每一款,都值得按下开始键</p>
+    </div>
+
+    <div class="games-grid">
+      <article class="game-card game-br reveal">
+        <div class="game-card-inner">
+          <div class="game-visual">
+            <img src="assets/icon.svg" alt="Bullet Run 游戏图标" class="game-logo">
+          </div>
+          <div class="game-info">
+            <div class="game-status status-live"><span class="dot"></span>现已上线</div>
+            <h3 class="game-name">BULLET RUN</h3>
+            <p class="game-desc">2D 俯视角硬核射击。16 级军衔成长、21 人大逃杀、4 人僵尸合作、局域网联机对战——所有画面由 GDScript 纯代码绘制,零外部素材,零妥协。</p>
+            <div class="game-tags">
+              <span>俯视角射击</span><span>大逃杀</span><span>僵尸合作</span><span>局域网联机</span>
+            </div>
+            <div class="game-actions">
+              <a class="btn-gold" href="https://wwbbw.lanzouv.com/b019vyxpej" target="_blank" rel="noopener">立即下载</a>
+            </div>
+            <div class="password-box">
+              <span>提取码</span>
+              <code>h86r</code>
+              <button class="copy-btn" onclick="copyText('h86r', this)">复制</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="game-card game-sp reveal">
+        <div class="game-card-inner">
+          <div class="game-info">
+            <div class="game-status status-live"><span class="dot"></span>已发布</div>
+            <h3 class="game-name">SUPER POTATO</h3>
+            <p class="game-desc">致敬《土豆兄弟》的生存冒险新作。素材与 UI 全面升级,本地联机模式已上线,现已正式发布——欢迎体验！</p>
+            <div class="game-tags">
+              <span>生存 Roguelite</span><span>单机游戏</span><span>本地联机</span>
+            </div>
+            <div class="game-actions">
+              <a class="btn-gold" href="https://wwbbw.lanzouv.com/b019w80nwh" target="_blank" rel="noopener">立即下载</a>
+            </div>
+            <div class="password-box">
+              <span>提取码</span>
+              <code>1v5s</code>
+              <button class="copy-btn" onclick="copyText('1v5s', this)">复制</button>
+            </div>
+          </div>
+          <div class="game-visual">
+            <img src="assets/super-potato.svg" alt="SUPER POTATO 概念视觉" class="game-sp-art">
+          </div>
+        </div>
+      </article>
+
+      <article class="game-card game-sbx reveal">
+        <div class="game-card-inner">
+          <div class="game-visual">
+            <img src="assets/sandbox-fps.svg" alt="PROJECT: SANDBOX FPS 游戏图标" class="game-logo">
+          </div>
+          <div class="game-info">
+            <div class="game-status status-dev"><span class="dot"></span>开发中</div>
+            <h3 class="game-name">PROJECT: SANDBOX FPS</h3>
+            <p class="game-desc">想象一下：沙盒加 FPS 是什么样子？没有固定关卡、没有线性流程——只有你、枪械、和一座完全可破坏、可建造、可重塑的世界。想从楼顶炸开一条路直插敌方基地？行。想挖地道埋伏三天三夜？也行。每一颗子弹、每一次爆炸、每一堵墙的倒塌，都由物理模拟实时计算。这是属于玩家的战场，规则由你定义。</p>
+            <div class="game-tags">
+              <span>沙盒 FPS</span><span>物理破坏</span><span>自由建造</span><span>概念原型</span>
+            </div>
+            <div class="game-actions">
+              <a class="btn-ghost" href="#news">关注动态</a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 最新消息 -->
+<section class="news" id="news">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-eyebrow">Studio News</div>
+      <h2 class="section-title">最新消息</h2>
+      <p class="section-subtitle">工作室动态、版本公告、新作情报 — 第一时间掌握</p>
+    </div>
+    <div class="news-container" id="news-container"></div>
+  </div>
+</section>
+
+<!-- 关于工作室 -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-eyebrow">About Us</div>
+      <h2 class="section-title">关于 Vee Studio</h2>
+      <p class="section-subtitle">小团队,大野心</p>
+    </div>
+    <div class="about-inner">
+      <div class="about-text reveal">
+        <div class="founder-line">
+          <img src="assets/qiudidia.jpg" alt="创始人 qiudidia" class="founder-inline-avatar">
+          <p>由创始人 <strong>qiudidia</strong>主开发</p>
+        </div>
+        <p>我们相信:最好的游戏画面,是代码画出来的。Bullet Run 的每一把枪、每一个 UI 图标、每一次挥刀的刀光,全部来自 GDScript 的实时绘制 — 没有 Photoshop,没有素材包,只有纯粹的代码与热爱。</p>
+        <p>工作室的下一步?新作《SUPER POTATO》已经在路上:素材与 UI 全面升级,本地联机模式开发中,OPEN BETA 公测即将开启。我们不追赶潮流,不铺量 — 一款一款,认真做。</p>
+        <p>2026.7.30,Bullet Run 正式上线的那一天,意味着我们战胜了所有困难。而这,只是 Vee Studio 的开始。</p>
+        <img src="assets/qiudidia-signature.png" alt="qiudidia 签名" class="founder-signature">
+      </div>
+      <div class="about-side reveal" style="--d:120ms">
+        <div class="manifesto-card">
+          <img src="assets/vee_logo.svg" alt="Vee Studio 标志" class="manifesto-logo">
+          <div class="manifesto-quote">"不追赶潮流,<br>只认真做游戏。"</div>
+          <ul class="value-list">
+            <li><span class="value-name">代码即美术</span><span class="value-en">CODE AS ART</span></li>
+            <li><span class="value-name">玩法优先</span><span class="value-en">GAMEPLAY FIRST</span></li>
+            <li><span class="value-name">独立精神</span><span class="value-en">INDIE AT HEART</span></li>
+          </ul>
+          <div class="manifesto-caption">— qiudidia,Vee Studio 创始人</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 联系我们 -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-eyebrow">Contact</div>
+      <h2 class="section-title">联系我们</h2>
+      <p class="section-subtitle">有问题或合作意向?随时找我们</p>
+    </div>
+    <div class="contact-cards">
+      <div class="contact-card reveal">
+        <div class="contact-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><circle cx="24" cy="24" r="20"/><path d="M24 14v10l6 4" stroke-linecap="round"/></svg>
+        </div>
+        <div class="contact-label">QQ</div>
+        <div class="contact-value">3257717475</div>
+        <button class="contact-copy" onclick="copyText('3257717475', this)">复制</button>
+      </div>
+      <div class="contact-card reveal" style="--d:100ms">
+        <div class="contact-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M24 4C12 4 6 12 6 20c0 6 4 11 9 14l-2 6 7-4c1 0 3 1 4 1 12 0 18-8 18-17S36 4 24 4z" stroke-linejoin="round"/><circle cx="17" cy="20" r="1.5" fill="currentColor"/><circle cx="24" cy="20" r="1.5" fill="currentColor"/><circle cx="31" cy="20" r="1.5" fill="currentColor"/></svg>
+        </div>
+        <div class="contact-label">微信</div>
+        <div class="contact-value">qiudidia114514</div>
+        <button class="contact-copy" onclick="copyText('qiudidia114514', this)">复制</button>
+      </div>
+      <div class="contact-card reveal" style="--d:200ms">
+        <div class="contact-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="12" width="36" height="26" rx="3"/><path d="M6 14l18 14 18-14" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="contact-label">邮箱</div>
+        <div class="contact-value">bulletrun@foxmail.com</div>
+        <button class="contact-copy" onclick="copyText('bulletrun@foxmail.com', this)">复制</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 评论区 -->
+<section class="comments" id="comments">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-eyebrow">Community</div>
+      <h2 class="section-title">玩家评论</h2>
+      <p class="section-subtitle">用 GitHub 账号登录,留下你的想法</p>
+    </div>
+    <div class="comments-box">
+      <script src="https://giscus.app/client.js"
+        data-repo="qiudidia/bulletrun.github.io"
+        data-repo-id="R_kgDOTJd_9A"
+        data-category="General"
+        data-category-id="DIC_kwDOTJd_9M4DBaod"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+      </script>
+    </div>
+  </div>
+</section>
+
+<!-- 页脚 -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/vee_logo.svg" alt="Vee Studio 标志" class="footer-brand-logo">
+        <div>
+          <div class="footer-brand-name">VEE STUDIO</div>
+          <div class="footer-brand-sub">独立游戏工作室 · 用代码与热爱做游戏</div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">作品</div>
+        <a href="games/bullet-run.html">Bullet Run</a>
+        <a href="#games">SUPER POTATO</a>
+        <a href="#games">PROJECT: SANDBOX FPS</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">工作室</div>
+        <a href="#news">最新消息</a>
+        <a href="#about">关于我们</a>
+        <a href="#contact">联系我们</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Vee Studio. 保留所有权利。</span>
+      <span>Godot Engine 4.6 驱动 · 用热爱与 GDScript 打造</span>
+    </div>
+  </div>
+</footer>
+
+<!-- 新闻详情弹窗 -->
+<div class="news-modal" id="news-modal">
+  <div class="modal-backdrop" onclick="closeNewsModal()"></div>
+  <div class="news-modal-box" role="dialog" aria-modal="true">
+    <div id="news-modal-body"></div>
+    <button class="modal-close" onclick="closeNewsModal()" aria-label="关闭">&times;</button>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
